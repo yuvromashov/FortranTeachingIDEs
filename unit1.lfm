@@ -1,0 +1,149 @@
+object Form1: TForm1
+  Left = 505
+  Height = 596
+  Top = 151
+  Width = 957
+  Caption = 'FTIDE1: '
+  ClientHeight = 572
+  ClientWidth = 957
+  Menu = MainMenu1
+  LCLVersion = '2.0.6.0'
+  object StatusBar1: TStatusBar
+    Left = 3
+    Height = 17
+    Top = 552
+    Width = 951
+    BorderSpacing.Around = 3
+    Panels = <>
+  end
+  object PageControl1: TPageControl
+    Left = 5
+    Height = 542
+    Top = 5
+    Width = 947
+    ActivePage = TabSheet2
+    Align = alClient
+    BorderSpacing.Around = 5
+    ParentShowHint = False
+    TabIndex = 1
+    TabOrder = 1
+    TabPosition = tpBottom
+    object TabSheet1: TTabSheet
+      Caption = 'Code Editor'
+      ClientHeight = 512
+      ClientWidth = 937
+      object Memo1: TMemo
+        Left = 0
+        Height = 512
+        Top = 0
+        Width = 937
+        Align = alClient
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'FreeMono'
+        Lines.Strings = (
+          ''
+        )
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Messages'
+      ClientHeight = 512
+      ClientWidth = 937
+      object Memo2: TMemo
+        Left = 0
+        Height = 512
+        Top = 0
+        Width = 937
+        Align = alClient
+        Font.Height = -13
+        Font.Name = 'FreeMono'
+        Lines.Strings = (
+          ''
+        )
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 792
+    top = 104
+    object MenuItem1: TMenuItem
+      Caption = 'Project'
+      object MenuItem2: TMenuItem
+        Caption = 'New'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Save'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Open'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Close'
+        OnClick = MenuItem5Click
+      end
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Compiler'
+      object MenuItem7: TMenuItem
+        Caption = 'Compile'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Compile and Run'
+        OnClick = MenuItem8Click
+      end
+    end
+    object MenuItem9: TMenuItem
+      Caption = 'Run'
+      OnClick = MenuItem9Click
+    end
+    object MenuItem10: TMenuItem
+      Caption = 'Settings'
+      object MenuItem11: TMenuItem
+        Caption = 'Font'
+        OnClick = MenuItem11Click
+      end
+    end
+  end
+  object Process1: TProcess
+    Active = False
+    Options = [poUsePipes, poStderrToOutPut]
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 784
+    top = 200
+  end
+  object SelectDirectoryDialog1: TSelectDirectoryDialog
+    left = 800
+    top = 304
+  end
+  object OpenDialog1: TOpenDialog
+    FilterIndex = 0
+    left = 800
+    top = 440
+  end
+  object FontDialog1: TFontDialog
+    Font.Height = -13
+    Font.Name = 'FreeMono'
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 850
+    top = 62
+  end
+end
